@@ -1,0 +1,102 @@
+/* Global */
+
+body {
+  background: #20262e;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+/* Typography */
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Layout */
+
+.container {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+/* Elements */
+
+.information-dialog {
+  border-radius: 6px;
+  border: 2px solid tomato;
+  background-color: rgba(255, 99, 71, 0.3);
+  color: tomato;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.home_page-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.home_page-actions > * {
+  flex: 0 1 auto;
+}
+
+.button {
+  position: relative;
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 35px 10px 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: mediumseagreen;
+  color: white;
+  cursor: pointer;
+}
+
+.button::after {
+  content: '\027A4';
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding-left: 10px;
+  transform: rotate(-40deg);
+}
+
+.dated {
+  margin-top: 20px;
+}
+
+/* Print styles */
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  body {
+    background: #fff;
+    filter: grayscale(100%);
+  }
+
+  .print-only {
+    display: block;
+  }
+}
+
+/* Page properties (print) */
+
+@page {
+  size: auto;
+  margin: 0mm;
+} /* hides the date and page number */
